@@ -5,6 +5,7 @@
         <groupId>pl.piomin</groupId>
         <artifactId>sample-vertx-kubernetes</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>customer-vertx-service</artifactId>
 
