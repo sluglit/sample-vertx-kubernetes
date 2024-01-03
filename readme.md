@@ -11,12 +11,14 @@ Detailed description can be found here: [Running Vert.x Microservices on Kuberne
 
 In order to run the apps on Kubernetes do the following things:
 
-Build the whole project with the following Maven command:
+Setup a local docker registry
 ```shell
-$ mvn clean package
+docker run -d -p 5000:5000 --restart=always --name registry registry:2
+skaffold dev --default-repo=localhost:5000
 ```
-
 Then build the image and deploy both apps on Kubernetes with that command (`skaffold` is already configured there):
 ```shell
 $ skaffold dev --port-forward
 ```
+
+
